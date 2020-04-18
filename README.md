@@ -4,7 +4,7 @@ Natural Language Processing|Dan Jurafsky, Christopher Manning
 
 | Algo | Method | Code  |   |   |
 |---|---|---|---|---|
-|Find min Edit distance (Levenshtein) | DP  | MinEditDistance.py  |   |   |
+|Find min Edit distance (Levenshtein) | DP  | [MinEditDistance.py](./MinEditDistance.py)  |   |   |
 |   |   |   |   |   |
 |   |   |   |   |   |
 
