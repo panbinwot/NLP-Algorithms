@@ -5,8 +5,8 @@ Natural Language Processing|Dan Jurafsky, Christopher Manning
 |#| Subject | Method | Code  | Complexity (Time, Space) |
 |---|---|---|---|---|
 |1|Find min Edit distance (Levenshtein) with Backtrace | DP   |[MinEditDistance.py](./MinEditDistance.py)  | O(nm), O(nm) |
-|2|  |   |   | |
-|3|   |   |   | |
+|2|The Overlap Gene Dection | DP |edits from [MinEditDistance.py](./MinEditDistance.py)  |  O(nm), O(nm)  |
+|3|Local Alignment Problem   | DP   |   |  O(nm), O(nm)   |
 
 # Algorithms
 1. Find Minimal Edit Distance (Leveshtein)
@@ -36,4 +36,31 @@ def EditMinDistance(str1,str2):
 Followup: Weighted Min Edit Distance
 Add cost term when computing the distance in the subproblems
 See more about Needleman-Wunsch Algorithm
+
+2. The Overlap Gene Detection
+Problem: Find the overlap 
+```
+For all i, j
+    F(i,0), F(0,j) = 0, 0
+
+F_opt = max(max_i F(i,N)
+            max_j F(M, j)) 
+```
+
+3.  Local Alignment Problem
+Find tow substring whose similarity is maximum.
+```
+def SmithWaterman(str1, str2):
+    F(i,0) = 0
+    F(0,j) = 0
+
+    F(i,j) =  max(0,
+                F(i-1, j) - d,
+                F(i, j-1) - d,
+                F(i - 1, j - 1) + s(x_i, y_j)
+                )
+    return F_opt = max_ij F(i,j)
+```
+
+4.  
 
